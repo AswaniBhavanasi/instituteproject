@@ -69,7 +69,9 @@ def reg_Page(request):
             )
             data.save()
             lform=LoginForm()
-            return render(request,'loginPage.html',{'lform':lform})
+            return redirect('login')
+            # return render(request,'loginPage.html',{'lform':lform})
+            #return render(request,'loginPage.html',{'lform':lform})
 
         else:
             return HttpResponse("User Invalid Data")
